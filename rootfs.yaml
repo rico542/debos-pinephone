@@ -1,0 +1,122 @@
+{{- $architecture := or .architecture "arm64" -}}
+{{- $hostname := or .hostname "pinephone" -}}
+
+architecture: {{ $architecture }}
+
+actions:
+  - action: debootstrap
+    suite: sid
+    components:
+      - main
+      - contrib
+      - non-free
+    mirror: https://deb.debian.org/debian
+    variant: minbase
+
+  - action: run
+    description: Add hostname
+    chroot: true
+    command: echo {{ $hostname }} > /etc/hostname
+
+  - action: apt
+    description: Install debian packages
+    packages:
+      # Base system
+      - alsa-utils
+      - dconf-gsettings-backend
+      - dosfstools
+      - gstreamer1.0-nice
+      - gstreamer1.0-packagekit
+      - jitterentropy-rngd
+      - kbd
+      - locales
+      - mmc-utils
+      - plymouth
+      - python3-dbus
+      - usb-modeswitch
+      - usbutils
+      - u-boot-tools
+      - xdg-desktop-portal-gtk
+      - xdg-user-dirs
+      # System libraries
+      - libdbus-glib-1-2
+      - libfarstream-0.2-5
+      - libgadu3
+      - libgl1-mesa-dri
+      - libgnome-games-support-1-3
+      - libgsound0
+      - libgtop-2.0-11
+      - libhandy-0.0-0
+      - libmeanwhile1
+      - libmxml1
+      - libnss-systemd
+      - libpam-systemd
+      - libprotobuf-c1
+      - libpurple0
+      - libsasl2-modules
+      - libtracker-sparql-2.0-0
+      - libvte-2.91-0
+      - libxcb-icccm4
+      - libzephyr4
+      # Console utilities
+      - bash-completion
+      - git
+      - htop
+      - less
+      - lsof
+      - parted
+      - psutils
+      - sudo
+      - vim
+      - wget
+      - unzip
+      # Graphical software & utilities
+      - gdm3
+      - gir1.2-gtk-3.0
+      - wayland-protocols
+      - weston
+      # Fonts
+      - fonts-cantarell
+      - fonts-lato
+      - fonts-noto-color-emoji
+      # Bluetooth
+      - bluez
+      - pulseaudio-module-bluetooth
+      # Network management
+      - iw
+      - mobile-broadband-provider-info
+      - modemmanager
+      - net-tools
+      - network-manager-gnome
+      - ofono
+      - rfkill
+      - wireless-tools
+      # Network software
+      - openssh-server
+      - openssh-client
+      # User applications
+      - epiphany-browser
+      - evince
+      - gedit
+      - gnome-bluetooth
+      - gnome-calendar
+      - gnome-chess
+      - gnome-contacts
+      - gnome-maps
+      - gnome-online-accounts
+      - gnome-session
+      - gnome-settings-daemon
+      - gnome-themes-extra-data
+      - lollypop
+      - youtube-dl
+
+  - action: overlay
+    description: Install custom packages
+    source: overlays/packages
+
+  - action: run
+    chroot: true
+    command: apt install -y /pkg/*.deb && rm -rf /pkg/
+
+  - action: pack
+    file: rootfs.tar.gz
