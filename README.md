@@ -15,7 +15,7 @@ To build the image, you need to have `debos` and `bmaptool`. On a debian-based
 system, install these dependencies by typing the following command in a terminal:
 
 ```
-sudo apt instal debos bmap-tools
+sudo apt install debos bmap-tools
 ```
 
 Then simply browse to the `debos-pinephone` folder and execute `./build.sh`.
