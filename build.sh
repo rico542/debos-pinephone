@@ -2,5 +2,5 @@
 
 export PATH=/sbin:/usr/sbin:$PATH
 
-debos rootfs.yaml &&
-debos --scratchsize=8G image.yaml
+debos -m 4G rootfs.yaml &&
+debos -m 4G --scratchsize=8G image.yaml
