@@ -1,0 +1,8 @@
+image: jbbgameich/debos-docker
+
+debosimg:
+  stage: build
+  only:
+    - debos-build-fix
+  script:
+    - ./build.sh
