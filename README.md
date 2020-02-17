@@ -4,9 +4,9 @@ A set of [debos](https://github.com/go-debos/debos) recipes for building a
 debian-based image for the PinePhone.
 
 A prebuilt image is available
-[here](https://people.collabora.com/~aferraris/pinephone/debian-pinephone.img.gz),
+[here](http://pinephone.a-wai.com/images/debian-pinephone.img.gz),
 as is the corresponding
-[bmap](https://people.collabora.com/~aferraris/pinephone/debian-pinephone.img.bmap)
+[bmap](http://pinephone.a-wai.com/images/debian-pinephone.img.bmap)
 file.
 
 ## Build
@@ -105,5 +105,6 @@ be rebuilt with various levels of modifications. Here is the full list:
 - [ ] enable sound
 - [ ] enable camera
 - [ ] enable modem
+- [ ] enable graphics acceleration
 - [ ] send/receive text messages
 - [ ] send/receive phone calls
