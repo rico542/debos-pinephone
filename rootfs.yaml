@@ -95,6 +95,7 @@ actions:
       - openssh-server
       - openssh-client
       # User applications
+      - cheese
       - epiphany-browser
       - evince
       - gedit
@@ -109,6 +110,9 @@ actions:
       - gnome-themes-extra-data
       - lollypop
       - youtube-dl
+      # Debug utilities
+      - inetutils-ping
+      - pciutils
 
   - action: pack
     file: rootfs.tar.gz
