@@ -11,6 +11,20 @@ actions:
   - action: overlay
     source: overlays/rootfs
 
+  - action: apt
+    description: Install phone-specific packages
+    packages:
+      - calls
+      - chatty
+      - firmware-rtl8723cs
+      - gnome-2048
+      - gnome-clocks
+      - gnome-control-center
+      - gnome-usage
+      - kgx
+      - phoc
+      - phosh
+
   - action: run
     description: Set up default user
     chroot: true
@@ -33,10 +47,10 @@ actions:
   - action: filesystem-deploy
     description: Deploy filesystem onto image
 
-  - action: run
+  - action: apt
     description: Install kernel
-    chroot: true
-    command: apt install -y /pkg/* && rm -rf /pkg/
+    packages:
+      - linux-image-5.5-pinephone
 
   - action: run
     description: Create initramfs uImage

@@ -110,13 +110,5 @@ actions:
       - lollypop
       - youtube-dl
 
-  - action: overlay
-    description: Install custom packages
-    source: overlays/packages
-
-  - action: run
-    chroot: true
-    command: apt install -y /pkg/*.deb && rm -rf /pkg/
-
   - action: pack
     file: rootfs.tar.gz
