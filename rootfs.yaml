@@ -23,6 +23,7 @@ actions:
     packages:
       # Base system
       - alsa-utils
+      - ca-certificates
       - dconf-gsettings-backend
       - dosfstools
       - gstreamer1.0-nice
@@ -49,6 +50,7 @@ actions:
       - libhandy-0.0-0
       - libmeanwhile1
       - libmxml1
+      - libnss-resolve
       - libnss-systemd
       - libpam-systemd
       - libprotobuf-c1
@@ -65,6 +67,7 @@ actions:
       - less
       - lsof
       - parted
+      - psmisc
       - psutils
       - sudo
       - vim
@@ -88,7 +91,6 @@ actions:
       - modemmanager
       - net-tools
       - network-manager-gnome
-      - ofono
       - rfkill
       - wireless-tools
       # Network software
