@@ -7,6 +7,7 @@ adduser $USERNAME sudo
 
 # Needed for hardware access rights
 adduser $USERNAME video
+adduser $USERNAME render
 adduser $USERNAME audio
 adduser $USERNAME bluetooth
 adduser $USERNAME plugdev
