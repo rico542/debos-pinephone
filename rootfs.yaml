@@ -99,12 +99,8 @@ actions:
       # User applications
       - cheese
       - epiphany-browser
-      - evince
-      - gedit
       - gnome-bluetooth
       - gnome-calendar
-      - gnome-chess
-      - gnome-contacts
       - gnome-maps
       - gnome-online-accounts
       - gnome-session

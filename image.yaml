@@ -16,9 +16,13 @@ actions:
     packages:
       - calls
       - chatty
+      - evince
       - firmware-rtl8723cs
+      - gedit
       - gnome-2048
+      - gnome-chess
       - gnome-clocks
+      - gnome-contacts
       - gnome-control-center
       - gnome-usage
       - kgx
