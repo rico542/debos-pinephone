@@ -29,6 +29,7 @@ actions:
       - kgx
       - phoc
       - phosh
+      - plymouth-theme-pinephone
       - powersupply
 
   - action: run
