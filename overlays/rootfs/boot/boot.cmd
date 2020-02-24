@@ -1,4 +1,4 @@
-setenv bootargs console=tty0 console=ttyS0,115200 no_console_suspend panic=10 consoleblank=0 loglevel=7 root=/dev/mmcblk0p1 rw quiet splash
+setenv bootargs console=ttyS0,115200 no_console_suspend panic=10 consoleblank=0 loglevel=7 root=/dev/mmcblk0p1 rw splash plymouth.ignore-serial-consoles
 
 led 1 on
 echo "Loading kernel..."
