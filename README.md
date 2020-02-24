@@ -45,16 +45,20 @@ The folowing features work, at least most of the time:
 
 - UART console
 - touchscreen
+- graphics acceleration
 - wifi connection
 - web browsing
+- text messaging
+- sound playback
 
 However, keep in mind this is a developer preview, and a number of features are
 not yet implemented:
 
-- phone calls and text messages
-- sound support
+- full sound support
+- voice calls
 - power management
 - camera support
+- bluetooth
 
 ## Included software
 
@@ -86,25 +90,28 @@ be rebuilt with various levels of modifications. Here is the full list:
 - [gnome-control-center](https://source.puri.sm/Librem5/gnome-control-center), as modified by Purism
 - [gnome-usage](https://source.puri.sm/Librem5/gnome-usage), as modified by Purism
 - [purple-lurch](https://source.puri.sm/Librem5/lurch), as modified by Purism
-- [u-boot](https://gitlab.com/pine64-org/u-boot) and [arm-trusted-firmware](https://gitlab.com/pine64-org/arm-trusted-firmware), as provided by Pine64
+- [arm-trusted-firmware](https://gitlab.com/pine64-org/arm-trusted-firmware), as provided by Pine64
 
 #### Packages built from modified sources
 
 - [libwlroots](https://gitlab.com/a-wai/wlroots), based on debian's [wlroots](https://salsa.debian.org/swaywm-team/wlroots)
+- [desktop-base](https://gitlab.com/a-wai/desktop-base), based on debian's [desktop-base](https://salsa.debian.org/debian-desktop-team/desktop-base)
 - [phosh](https://gitlab.com/a-wai/phosh), based on Purism's [phosh](https://source.puri.sm/Librem5/phosh)
 - [squeekboard](https://gitlab.com/a-wai/squeekboard), based on Purism's [squeekboard](https://source.puri.sm/Librem5/squeekboard)
-- [plymouth-theme-pinephone](https://gitlab.com/a-wai/plymouth-theme-pinephone), based on Purism's [plymouth-theme-librem5](https://source.puri.sm/Librem5/plymouth-theme-librem5)
 - [linux](https://gitlab.com/a-wai/linux-pinephone), based on Pine64's [kernel](https://gitlab.com/pine64-org/linux) and ayufan's [rtl8723cs](https://github.com/ayufan-pine64/rtl8723cs/) driver
+- [powersupply](https://gitlab.com/a-wai/powersupply), based on Martijn Braam's [powersupply](https://gitlab.com/MartijnBraam/powersupply)
 - [firmware-rtl8723cs](https://gitlab.com/a-wai/firmware-rtl8723cs), based on anarsoul's [rtl8723bt-firmware](https://github.com/anarsoul/rtl8723bt-firmware/)
+- [u-boot](https://gitlab.com/a-wai/u-boot), based on Pine64's [u-boot](https://gitlab.com/pine64-org/u-boot)
 
 ## TODO
 
-- [ ] fix desktop background
-- [ ] display splash screen in bootloader
-- [ ] display splash screen during linux boot
-- [ ] enable sound
+- [x] fix desktop background
+- [x] enable sound
+- [x] enable modem
+- [x] enable graphics acceleration
+- [x] send/receive text messages
+- [x] display splash screen during linux boot
+- [ ] switch sound output when (un)plugging the headphones
+- [ ] send/receive voice calls
 - [ ] enable camera
-- [ ] enable modem
-- [ ] enable graphics acceleration
-- [ ] send/receive text messages
-- [ ] send/receive phone calls
+- [ ] display splash screen in bootloader (unlikely, as u-boot lacks support for Mali 450)
