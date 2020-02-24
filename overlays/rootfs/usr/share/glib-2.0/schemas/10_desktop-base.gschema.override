@@ -1,0 +1,7 @@
+[org.gnome.desktop.background]
+picture-options='zoom'
+picture-uri='file:///usr/share/images/pinephone/debian-portrait.png'
+
+[org.gnome.desktop.screensaver]
+picture-options='zoom'
+picture-uri='file:///usr/share/images/pinephone/debian-portrait-lock.png'
