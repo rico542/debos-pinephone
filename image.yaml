@@ -32,7 +32,6 @@ actions:
       - kgx
       - phoc
       - phosh
-      - plymouth-theme-pinephone
       - powersupply
       - purple-lurch
       - purple-mm-sms

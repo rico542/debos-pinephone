@@ -25,7 +25,6 @@ actions:
       - alsa-utils
       - ca-certificates
       - dconf-gsettings-backend
-      - desktop-base
       - dosfstools
       - gstreamer1.0-nice
       - gstreamer1.0-packagekit
