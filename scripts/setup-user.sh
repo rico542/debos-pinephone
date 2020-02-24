@@ -17,3 +17,6 @@ echo "root:root" | chpasswd
 
 mv /var/lib/AccountsService/users/USERNAME /var/lib/AccountsService/users/$USERNAME
 sed -i -e "s/@@USERNAME@@/$USERNAME/" /etc/gdm3/daemon.conf
+
+# Quick hack to allow the default user to access SMS
+sed -i -e 's/auth_self_keep/yes/g' /usr/share/polkit-1/actions/org.freedesktop.ModemManager1.policy
