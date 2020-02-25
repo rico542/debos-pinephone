@@ -9,6 +9,9 @@ as is the corresponding
 [bmap](http://pinephone.a-wai.com/images/debian-pinephone.img.bmap)
 file.
 
+The default user is `debian` with password `1234`.
+The default `root` password is `root`.
+
 ## Build
 
 To build the image, you need to have `debos` and `bmaptool`. On a debian-based
