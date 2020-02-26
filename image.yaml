@@ -1,6 +1,7 @@
 {{- $architecture := or .architecture "arm64" -}}
 {{- $image := or .image "debian-pinephone.img" -}}
 {{- $username := or .username "debian" -}}
+{{- $password := or .password "1234" -}}
 {{- $kernel := or .kernel "5.5-pinephone" }}
 
 architecture: {{ $architecture }}
@@ -48,7 +49,7 @@ actions:
   - action: run
     description: Set up default user
     chroot: true
-    script: scripts/setup-user.sh {{ $username }}
+    script: scripts/setup-user.sh {{ $username }} {{ $password }}
 
   - action: run
     description: Enable modem on startup

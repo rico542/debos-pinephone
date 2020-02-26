@@ -1,6 +1,9 @@
 #!/bin/sh
 
 USERNAME=$1
+[ "$USERNAME" ] || exit 1
+PASSWORD=$2
+[ "$PASSWORD" ] || exit 1
 
 adduser --gecos $USERNAME --disabled-password --shell /bin/bash $USERNAME
 adduser $USERNAME sudo
@@ -12,7 +15,7 @@ adduser $USERNAME audio
 adduser $USERNAME bluetooth
 adduser $USERNAME plugdev
 
-echo "$USERNAME:1234" | chpasswd
+echo "$USERNAME:$PASSWORD" | chpasswd
 echo "root:root" | chpasswd
 
 mv /var/lib/AccountsService/users/USERNAME /var/lib/AccountsService/users/$USERNAME
