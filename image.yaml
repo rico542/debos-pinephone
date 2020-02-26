@@ -30,6 +30,7 @@ actions:
       - gnome-software
       - gnome-usage
       - kgx
+      - modemmanager
       - phoc
       - phosh
       - powersupply
