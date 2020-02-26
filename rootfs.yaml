@@ -23,6 +23,7 @@ actions:
     packages:
       # Base system
       - alsa-utils
+      - apt-utils
       - ca-certificates
       - dconf-gsettings-backend
       - dosfstools
@@ -31,6 +32,7 @@ actions:
       - jitterentropy-rngd
       - kbd
       - locales
+      - man-db
       - mmc-utils
       - plymouth
       - python3-dbus
@@ -66,6 +68,7 @@ actions:
       - htop
       - less
       - lsof
+      - nano
       - parted
       - psmisc
       - psutils
@@ -73,6 +76,7 @@ actions:
       - vim
       - wget
       - unzip
+      - xz-utils
       # Graphical software & utilities
       - at-spi2-core
       - gdm3
