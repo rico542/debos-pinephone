@@ -61,7 +61,7 @@ actions:
       - libhandy-0.0-0
       - libmeanwhile1
       - libmxml1
-      - libnss-resolve
+      - libnss-myhostname
       - libnss-systemd
       - libpam-cap
       - libpam-gnome-keyring
@@ -139,7 +139,9 @@ actions:
       - lollypop
       - youtube-dl
       # Debug utilities
+      - dnsutils
       - inetutils-ping
+      - inetutils-traceroute
       - pciutils
 
   - action: pack
