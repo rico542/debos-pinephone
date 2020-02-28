@@ -93,7 +93,6 @@ actions:
       - xz-utils
       # Graphical software & utilities
       - at-spi2-core
-      - gdm3
       - gir1.2-gtk-3.0
       - gvfs
       - gvfs-backends

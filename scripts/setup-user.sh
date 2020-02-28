@@ -17,6 +17,3 @@ adduser $USERNAME plugdev
 
 echo "$USERNAME:$PASSWORD" | chpasswd
 echo "root:root" | chpasswd
-
-mv /var/lib/AccountsService/users/USERNAME /var/lib/AccountsService/users/$USERNAME
-sed -i -e "s/@@USERNAME@@/$USERNAME/" /etc/gdm3/daemon.conf
