@@ -136,6 +136,7 @@ actions:
       - gnome-settings-daemon
       - gnome-themes-extra-data
       - lollypop
+      - nemo
       - youtube-dl
       # Debug utilities
       - dnsutils
