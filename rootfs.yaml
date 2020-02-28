@@ -19,29 +19,38 @@ actions:
     command: echo {{ $hostname }} > /etc/hostname
 
   - action: apt
+    recommends: false
     description: Install debian packages
     packages:
       # Base system
       - alsa-utils
       - apt-utils
+      - busybox
       - ca-certificates
+      - console-data
+      - dbus-user-session
       - dconf-gsettings-backend
       - dosfstools
-      - gstreamer1.0-nice
-      - gstreamer1.0-packagekit
+      - file
+      - hwdata
       - jitterentropy-rngd
       - kbd
       - locales
       - man-db
       - mmc-utils
+      - patch
       - plymouth
+      - plymouth-label
       - python3-dbus
+      - rtkit
       - usb-modeswitch
       - usbutils
       - u-boot-tools
       - xdg-desktop-portal-gtk
       - xdg-user-dirs
       # System libraries
+      - libcanberra-gtk3-module
+      - libcanberra-pulse
       - libdbus-glib-1-2
       - libfarstream-0.2-5
       - libgadu3
@@ -54,6 +63,8 @@ actions:
       - libmxml1
       - libnss-resolve
       - libnss-systemd
+      - libpam-cap
+      - libpam-gnome-keyring
       - libpam-systemd
       - libprotobuf-c1
       - libpurple0
@@ -64,14 +75,17 @@ actions:
       - libzephyr4
       # Console utilities
       - bash-completion
+      - bzip2
       - git
       - htop
+      - inxi
       - less
       - lsof
       - nano
       - parted
       - psmisc
       - psutils
+      - rygel
       - sudo
       - vim
       - wget
@@ -81,6 +95,10 @@ actions:
       - at-spi2-core
       - gdm3
       - gir1.2-gtk-3.0
+      - gvfs
+      - gvfs-backends
+      - mesa-va-drivers
+      - mesa-vdpau-drivers
       - wayland-protocols
       - weston
       # Fonts
@@ -100,6 +118,14 @@ actions:
       # Network software
       - openssh-server
       - openssh-client
+      # Multimedia support
+      - ffmpeg
+      - gstreamer1.0-gl
+      - gstreamer1.0-nice
+      - gstreamer1.0-packagekit
+      - gstreamer1.0-plugins-base
+      - gstreamer1.0-plugins-good
+      - gstreamer1.0-pulseaudio
       # User applications
       - cheese
       - epiphany-browser
