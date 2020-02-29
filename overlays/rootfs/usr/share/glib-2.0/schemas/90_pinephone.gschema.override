@@ -8,3 +8,9 @@ start-with-sidebar=false
 [org.nemo.preferences]
 default-folder-viewer='compact-view'
 click-policy='single'
+
+[org.gnome.Cheese]
+photo-x-resolution=1280
+photo-y-resolution=960
+video-x-resolution=1280
+video-y-resolution=960
