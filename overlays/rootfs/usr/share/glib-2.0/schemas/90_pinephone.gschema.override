@@ -9,6 +9,9 @@ start-with-sidebar=false
 default-folder-viewer='compact-view'
 click-policy='single'
 
+[org.gnome.Epiphany.web]
+mobile-user-agent=true
+
 [org.gnome.Cheese]
 photo-x-resolution=1280
 photo-y-resolution=960
