@@ -17,6 +17,7 @@ actions:
     recommends: false
     description: Install phone-specific packages
     packages:
+      - alsa-ucm-conf
       - calls
       - chatty
       - evince
