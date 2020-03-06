@@ -39,7 +39,7 @@ fi
 ARGS="$ARGS --scratchsize=8G"
 
 if [ ! "$image_only" ]; then
-  debos $ARGS rootfs.yaml || exit 1
+  debos $ARGS bootstrap.yaml || exit 1
 fi
 debos $ARGS -t image:$IMG_FILE image.yaml
 

@@ -1,0 +1,22 @@
+{{- $architecture := or .architecture "arm64" -}}
+{{- $hostname := or .hostname "pinephone" -}}
+
+architecture: {{ $architecture }}
+
+actions:
+  - action: debootstrap
+    suite: sid
+    components:
+      - main
+      - contrib
+      - non-free
+    mirror: http://deb.debian.org/debian
+    variant: minbase
+
+  - action: run
+    description: Add hostname
+    chroot: true
+    command: echo {{ $hostname }} > /etc/hostname
+
+  - action: pack
+    file: bootstrap.tar.gz

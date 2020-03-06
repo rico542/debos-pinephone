@@ -8,7 +8,7 @@ architecture: {{ $architecture }}
 
 actions:
   - action: unpack
-    file: rootfs.tar.gz
+    file: bootstrap.tar.gz
 
   - action: overlay
     source: overlays/rootfs
