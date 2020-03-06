@@ -3,11 +3,8 @@
 A set of [debos](https://github.com/go-debos/debos) recipes for building a
 debian-based image for the PinePhone.
 
-A prebuilt image is available
-[here](http://pinephone.a-wai.com/images/debian-pinephone.img.gz),
-as is the corresponding
-[bmap](http://pinephone.a-wai.com/images/debian-pinephone.img.bmap)
-file.
+Prebuilt images are available
+[here](http://pinephone.a-wai.com/images/).
 
 The default user is `debian` with password `1234`.
 The default `root` password is `root`.
@@ -53,12 +50,11 @@ The folowing features work, at least most of the time:
 - web browsing
 - text messaging
 - sound playback
+- voice calls
 
 However, keep in mind this is a developer preview, and a number of features are
 not yet implemented:
 
-- full sound support
-- voice calls
 - power management
 - camera support
 - bluetooth
@@ -77,8 +73,9 @@ The generated image include, among others, the following packages:
 - [Squeekboard](https://gitlab.com/a-wai/squeekboard) virtual keyboard
 
 Most packages installed on this image are fetched directly from the debian
-archives. However, a few packages (included in binary form in this repo) had to
-be rebuilt with various levels of modifications. Here is the full list:
+archives. However, a few packages had to be rebuilt with various levels of
+modifications, and are stored in a separate
+[archive](http://pinephone.a-wai.com/). Here is the full list:
 
 #### Packages built from upstream sources
 
@@ -114,7 +111,8 @@ be rebuilt with various levels of modifications. Here is the full list:
 - [x] enable graphics acceleration
 - [x] send/receive text messages
 - [x] display splash screen during linux boot
+- [x] send/receive voice calls
+- [ ] enable bluetooth
 - [ ] switch sound output when (un)plugging the headphones
-- [ ] send/receive voice calls
 - [ ] enable camera
 - [ ] display splash screen in bootloader (unlikely, as u-boot lacks support for Mali 450)
