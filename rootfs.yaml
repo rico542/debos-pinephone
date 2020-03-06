@@ -26,7 +26,6 @@ actions:
       - alsa-utils
       - apt-utils
       - busybox
-      - ca-certificates
       - console-data
       - dbus-user-session
       - dconf-gsettings-backend
