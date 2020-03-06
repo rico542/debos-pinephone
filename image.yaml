@@ -17,39 +17,8 @@ actions:
     recommends: false
     description: Install phone-specific packages
     packages:
-      - alsa-ucm-conf
-      - calls
-      - chatty
-      - evince
-      - firmware-rtl8723cs
-      - gedit
-      - gnome-2048
-      - gnome-calculator
-      - gnome-chess
-      - gnome-clocks
-      - gnome-contacts
-      - gnome-control-center
-      - gnome-initial-setup
-      - gnome-software
-      - gnome-usage
-      - kgx
-      - modemmanager
-      - phoc
-      - phosh
-      - powersupply
-      - purple-lurch
-      - purple-mm-sms
-      - purple-xmpp-http-upload
-      - telegram-purple
-      - wys
-      - pinephone-modem-scripts
-      - pinephone-tweaks
-
-  # This is needed for libwebkit2gtk
-  - action: run
-    description: Upgrade existing packages
-    chroot: true
-    command: yes | apt dist-upgrade
+      - task-pinephone-phosh
+      - pinephone-devtools
 
   - action: run
     description: Set up default user
