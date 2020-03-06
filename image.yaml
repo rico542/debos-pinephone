@@ -55,7 +55,7 @@ actions:
   - action: run
     description: Enable modem on startup
     chroot: true
-    command: systemctl enable pinephone-modem.service
+    command: systemctl enable pinephone-modem.service pinephone-modem-audio.service
 
   - action: image-partition
     imagename: {{ $image }}
