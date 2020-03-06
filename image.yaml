@@ -42,6 +42,8 @@ actions:
       - purple-xmpp-http-upload
       - telegram-purple
       - wys
+      - pinephone-modem-scripts
+      - pinephone-tweaks
 
   # This is needed for libwebkit2gtk
   - action: run
@@ -53,11 +55,6 @@ actions:
     description: Set up default user
     chroot: true
     script: scripts/setup-user.sh {{ $username }} {{ $password }}
-
-  - action: run
-    description: Enable modem on startup
-    chroot: true
-    command: systemctl enable pinephone-modem.service pinephone-modem-audio.service
 
   - action: image-partition
     imagename: {{ $image }}
