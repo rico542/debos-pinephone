@@ -41,6 +41,7 @@ actions:
       - purple-mm-sms
       - purple-xmpp-http-upload
       - telegram-purple
+      - wys
 
   # This is needed for libwebkit2gtk
   - action: run
