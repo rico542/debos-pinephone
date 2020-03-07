@@ -11,3 +11,7 @@ rm -f /usr/share/applications/vim.desktop \
 # downloaded packages
 apt -y autoremove --purge
 apt clean
+
+# Remove SSH keys and machine ID so they get generated on first boot
+rm -f /etc/ssh/ssh_host_* \
+      /etc/machine-id
