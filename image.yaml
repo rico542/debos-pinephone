@@ -18,7 +18,6 @@ actions:
     description: Install phone-specific packages
     packages:
       - task-pinephone-phosh
-      - pinephone-devtools
 
   - action: run
     description: Set up default user
