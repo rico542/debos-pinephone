@@ -25,6 +25,11 @@ actions:
     chroot: true
     script: scripts/setup-user.sh {{ $username }} {{ $password }}
 
+  - action: run
+    description: Set up plymouth theme
+    chroot: true
+    command: plymouth-set-default-theme pinephone
+
   - action: image-partition
     imagename: {{ $image }}
     imagesize: 4GB
