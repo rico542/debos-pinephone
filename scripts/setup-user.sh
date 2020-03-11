@@ -14,6 +14,7 @@ adduser $USERNAME render
 adduser $USERNAME audio
 adduser $USERNAME bluetooth
 adduser $USERNAME plugdev
+adduser $USERNAME input
 
 echo "$USERNAME:$PASSWORD" | chpasswd
 echo "root:root" | chpasswd
